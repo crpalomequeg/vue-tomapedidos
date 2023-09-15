@@ -43,9 +43,9 @@ const handleRegister = async () => {
     const password = form.value.password
     const usertype = form.value.usertype
     register(email, password, firstName, lastName, usertype)
-    // .then(() => router.push({ name: 'login' }))
+    .then(() => router.push({ name: 'pedidos' }))
     
-    router.push({ name: 'pedidos' })
+    // router.push({ name: 'pedidos' })
 }
 
 
@@ -58,9 +58,10 @@ const handleRegister = async () => {
     <main>
         <div class="mx-auto max-w-xs px-4 py-6 sm:px-6 lg:px-6">
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" @submit.prevent="handleRegister">
+            <div class="mb-6 text-center font-bold leading-6 text-gray-900">Registro de Usuario</div>
             <div class="mb-4">
                 <BaseInput
-                label="First Name"
+                label="Nombre"
                 type="text"
                 required
                 placeholder="Jhon" 
@@ -69,7 +70,7 @@ const handleRegister = async () => {
             </div>
             <div class="mb-4">
                 <BaseInput
-                label="Last Name"
+                label="Apellido"
                 type="text"
                 required
                 placeholder="Doe" 
@@ -87,7 +88,7 @@ const handleRegister = async () => {
             </div>
             <div class="mb-6">
                 <BaseInput
-                label="Password"
+                label="Contraseña"
                 type="password"
                 required
                 placeholder="******************" 
@@ -106,7 +107,7 @@ const handleRegister = async () => {
 
             <div class="flex items-center justify-between">
                 <BaseButton type="submit">
-                  Register
+                  Registrar
                 </BaseButton>
             </div>
             
